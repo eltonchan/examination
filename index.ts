@@ -105,7 +105,7 @@ export class Sequence {}
 
 function Generate(target) {
     target.count = 0;
-    target.prototype.next = (): number => ++target.count;
+    target.prototype.next = () => ++target.count;
 }
 
 
