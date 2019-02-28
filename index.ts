@@ -99,27 +99,9 @@ export function averageByQuarter(saleItems: Array<IsaleItem>): Array<IaverageByQ
 
 /**
  * @description Question 5: please create a tool to generate Sequence
- * way 1: generate
- */
-function* generate() {
-    let count: number = 0;
-
-    while(true) {
-        yield count++;
-    }
-}
-
-export function Sequence() {
-    return generate.call(generate.prototype);
-}
-
-
-/**
- * @description Question 5: please create a tool to generate Sequence
- * way 2: class Decorator
  */
 @Generate
-export class Sequence2 {}
+export class Sequence {}
 
 function Generate(target) {
     target.count = 0;
